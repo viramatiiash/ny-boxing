@@ -1,0 +1,222 @@
+include ./src/static/components/tab
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Choose a Class
+    link(rel="stylesheet" href="./tab.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+  body
+    .wrapper
+      .c-faq__container 
+        .c-faq__img-container 
+          img.c-faq__img(src="../assets/boxing-img.jpg" alt="Boxing Image")
+        .c-faq__content-container 
+          .c-faq__subtitle FAQ
+          h2.c-faq__title HAVE ANY QUESTIONS ABOUT BOXING?
+          .c-faq__border 
+          p.c-faq__text Below we give answers to the most frequently asked questions. You can also always contact us in any convenient way.
+          .c-faq__accordion
+            .c-accordion
+              .c-accordion__content.js-accordion
+                .c-accordion__question WHO CAN DO BOXING?
+                .content__container
+                  p.c-accordion__text
+                    | Everyone at our school can do boxing, without exception. We have groups for men, women, and children of different ages.
+                  .c-accordion__border
+              .c-accordion__content.js-accordion
+                .c-accordion__question DO YOU HAVE PRIVATE CLASSES?
+                .content__container
+                  p.c-accordion__text
+                    | Yes. Our school has both group and individual classes.
+                  .c-accordion__border
+              .c-accordion__content.js-accordion
+                .c-accordion__question DO YOU TRAIN PROFESSIONAL BOXERS?
+                .content__container
+                  p.c-accordion__text
+                    | Yes, our coaches have extensive experience in preparing professional boxers for WWBC fights.
+                  .c-accordion__border
+              .c-accordion__content.js-accordion
+                .c-accordion__question DO YOU CONDUCT MASTER-CLASSES?
+                .content__container
+                  p.c-accordion__text
+                    | We regularly invite famous boxers who conduct both theoretical and practical classes.
+                  .c-accordion__border
+              .c-accordion__content.js-accordion
+                .c-accordion__question HOW TO SIGN UP FOR A FREE LESSON?
+                .content__container
+                  p.c-accordion__text
+                    | You can sign up for the first free trial lesson by filling out the form on this website.
+                  .c-accordion__border
+      .c-schedule 
+        .c-schedule__subtitle Schedule 
+        h2.c-schedule__title CHOOSE A CLASS 
+        .c-schedule__border
+        +tabs([
+        {
+          title: 'Monday',
+          id: 'js-tab-monday',
+          active: true
+        },
+          {
+          title: 'Tuesday',
+          id: 'js-tab-tuesday',
+          active: false
+        },
+          {
+          title: 'Wednesday',
+          id: 'js-tab-wednesday',
+          active: false
+        },
+          {
+          title: 'Thursday',
+          id: 'js-tab-thursday',
+          active: false
+        },
+          {
+          title: 'Friday',
+          id: 'js-tab-friday',
+          active: false
+        },
+          {
+          title: 'Saturday',
+          id: 'js-tab-saturday',
+          active: false
+        },
+          {
+          title: 'Sunday',
+          id: 'js-tab-sunday',
+          active: false
+        }
+        ])
+        .c-schedule__content
+          .content
+            .content__day.content__monday.js-content-item#js-content-monday
+              h2.content__title Class on Monday
+              table.content__table 
+                tr.content__table-title 
+                  th Time
+                  th Class
+                  th Couch 
+                tr
+                  td 4:00 pm - 5:00 pm
+                  td Adults Group A Kickboxing
+                  td Tom Bellson
+                tr
+                  td 5:15 pm - 6:15 pm
+                  td Female Boxing
+                  td Daniel Jackson
+                tr
+                  td 6:30 pm - 7:30 pm
+                  td Adults Group A Kickboxing
+                  td Tom Bellson
+            .content__day.content__tuesday.js-content-item(style="display: none;")#js-content-tuesday
+              h2.content__title Class on Tuesday
+              table.content__table
+                tr.content__table-title  
+                  th Time
+                  th Class
+                  th Couch 
+                tr
+                  td 6:30 pm - 7:30 pm
+                  td Female Boxing
+                  td Susan Hooler
+
+                tr
+                  td 7:45 pm - 8:45 pm
+                  td Children Group A
+                  td Tom Bellson
+                tr
+                  td 9:00 pm - 10:00 pm
+                  td Adults Group B
+                  td Daniel Jackson
+            .content__day.content__wednesday.js-content-item(style="display: none;")#js-content-wednesday
+              h2.content__title Class on Wednesday
+              table.content__table
+                tr.content__table-title  
+                  th Time
+                  th Class
+                  th Couch 
+                tr
+                  td 4:00 pm - 5:00 pm
+                  td Kickboxing
+                  td Tom Bellson
+
+                tr
+                  td 6:30 pm - 7:30 pm
+                  td Children Group B
+                  td Susan Hooler
+            .content__day.content__thursday.js-content-item(style="display: none;")#js-content-thursday
+              h2.content__title Class on Thursday
+              table.content__table
+                thead 
+                  tr.content__table-title  
+                    th Time
+                    th Class
+                    th Couch 
+                tbody
+                  tr
+                    td 6:30 pm - 7:30 pm
+                    td Self-defense
+                    td Susan Hooler
+
+                  tr
+                    td 7:45 pm - 8:45 pm
+                    td Adults Group A
+                    td Tom Bellson
+                    //- TODO FOOTER 
+            .content__day.content__friday.js-content-item(style="display: none;")#js-content-friday
+              h2.content__title Class on Friday
+              table.content__table
+                tr.content__table-title 
+                  th Time
+                  th Class
+                  th Couch 
+                tr
+                  td 6:30 pm - 7:30 pm
+                  td Female Boxing
+                  td Susan Hooler
+
+                tr
+                  td 7:45 pm - 8:45 pm
+                  td Adults Group B
+                  td Daniel Jackson
+                tr
+                  td 9:00 pm - 10:00 pm
+                  td Self-defense
+                  td Susan Hooler
+            .content__day.content__saturday.js-content-item(style="display: none;")#js-content-saturday
+              h2.content__title Class on Saturday
+              table.content__table
+                tr.content__table-title 
+                  th Time
+                  th Class
+                  th Couch 
+                tr
+                  td 6:30 pm - 7:30 pm
+                  td Children Group A
+                  td Tom Bellson
+
+                tr
+                  td 7:45 pm - 8:45 pm
+                  td Kickboxing
+                  td Daniel Jackson
+                tr
+                  td 9:00 pm - 10:00 pm
+                  td Children Group B
+                  td Susan Hooler
+            .content__day.content__sunday.js-content-item(style="display: none;")#js-content-sunday
+              h2.content__title Class on Sunday
+              table.content__table
+                tr.content__table-title 
+                  th Time
+                  th Class
+                  th Couch 
+                tr
+                  td 6:30 pm - 7:30 pm
+                  td Self-defense
+                  td Susan Hooler
+    script(src="./tab.js" defer type="module") 

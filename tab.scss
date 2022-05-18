@@ -1,0 +1,139 @@
+@import './fonts';
+@import './variables';
+
+
+body {
+  font-family: $ff-text;
+  font-size: $fs-base;
+}
+
+.wrapper {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 2208px;
+  margin: 0 auto;
+  background-color: #e3e3e3;
+  height: 100vh;
+}
+
+table,
+td,
+th {
+  border: 1px solid $c-table;
+}
+
+th,
+td {
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.c-schedule {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__subtitle {
+    font-family: $ff-subtitle;
+    color: $c-subtitle;
+    font-size: $fs-subtitle;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-family: $ff-block-title;
+    color: $c-block-title;
+    font-weight: $fw-bold;
+    font-size: $fs-block-title;
+    margin-bottom: 40px;
+  }
+
+  &__border {
+    border-bottom: 2px solid $c-subtitle;
+    width: 50px;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    width: 100%;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+
+
+  &__title {
+    text-align: center;
+    font-family: $ff-block-title;
+    font-size: $fs-subtitle;
+    margin-bottom: 30px;
+  }
+
+  &__table {
+    width: 100%;
+    color: $c-table;
+    background-color: #fff;
+    border-collapse: collapse;
+  }
+
+  &__table-title {
+    text-align: left;
+    font-family: $ff-block-title;
+    font-size: $fs-table-title;
+    color: $c-white;
+    background-color: $c-subtitle;
+  }
+}
+
+.tabs {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  &__item {
+    font-family: $ff-block-title;
+    font-size: $fs-table-title;
+    color: $c-white;
+    width: fit-content;
+    background-color: $c-subtitle;
+    outline: none;
+    border: none;
+    min-width: 155px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    transition: all 0.2s ease-in-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item:hover {
+    color: $c-block-title;
+    background-color: $c-white;
+  }
+
+  &__item:active {
+    background: $c-table;
+  }
+}

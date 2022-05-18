@@ -1,0 +1,126 @@
+@import '../fonts';
+@import '../variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-text;
+  font-size: $fs-base;
+  background-color: #474747;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 100px;
+  width: 100%;
+  max-width: 2208px;
+  margin: 0 auto;
+  background-color: #e3e3e3;
+  height: 100vh;
+}
+
+.c-faq {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img-container {
+
+  }
+
+  &__img {
+  height: 100%;
+  
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  &__subtitle {
+    font-family: $ff-subtitle;
+    color: $c-subtitle;
+    font-size: $fs-subtitle;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-family: $ff-block-title;
+    color: $c-block-title;
+    font-weight: $fw-bold;
+    font-size: $fs-block-title;
+    margin-bottom: 20px;
+  }
+
+  &__border {
+    border: 1px solid $c-subtitle;
+    width: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px; //todo не компілиться змінна
+    margin-bottom: 40px;
+  }
+}
+
+.c-accordion {
+  &__content {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__question {
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: $fs-subtitle;
+    font-family: $ff-block-title;
+  }
+
+  &__question::before {
+    content: '+';
+    position: absolute;
+    color: $c-block-title;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    font-size: $fs-subtitle;
+    font-weight: 300;
+  }
+
+  &__content.active &__question::before {
+    content: '-';
+  }
+
+  &__text {
+    position: relative;
+    height: 0;
+    transition: 0.5s;
+    overflow-y: auto;
+    overflow-y: hidden;
+  }
+
+  &__content.active &__text {
+    height: 60px;
+    padding: 10px 10px 20px 0;
+  }
+
+  &__border {
+    border: 1px solid rgba(21, 17, 14, 0.1);
+    margin-bottom: 20px;
+  }
+}

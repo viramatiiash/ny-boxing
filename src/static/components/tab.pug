@@ -1,0 +1,6 @@
+mixin tabs(args = [])
+  nav.tabs  
+    each item in args 
+      - const classes = item.active ? 'active' : ''
+      button(type="button" id=item.id class=classes).tabs__item.js-tab-item
+        span= item.title
