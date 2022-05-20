@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-text;
+  font-size: $fs-base;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 100px;
+  width: 100%;
+  max-width: 2208px;
+  margin: 0 auto;
+  background-color: $c-bg;
+  height: 100%;
+}

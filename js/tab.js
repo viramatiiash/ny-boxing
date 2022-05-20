@@ -50,3 +50,5 @@ tabSaturday.addEventListener('click', () =>
 tabSunday.addEventListener('click', () =>
   changeTab('js-tab-sunday', 'js-content-sunday')
 );
+
+export { changeTab };

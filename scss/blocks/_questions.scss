@@ -1,33 +1,3 @@
-@import '../fonts';
-@import '../variables';
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $ff-text;
-  font-size: $fs-base;
-  background-color: #474747;
-}
-
-img {
-  width: 100%;
-}
-
-.wrapper {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 100px;
-  width: 100%;
-  max-width: 2208px;
-  margin: 0 auto;
-  background-color: #e3e3e3;
-  height: 100vh;
-}
-
 .c-faq {
   &__container {
     display: flex;
@@ -35,16 +5,13 @@ img {
     align-items: center;
   }
 
-  &__img-container {
-
-  }
-
   &__img {
-  height: 100%;
-  
+    height: 100%;
   }
 
   &__content-container {
+    margin: 0 auto;
+    max-width: 570px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -63,29 +30,29 @@ img {
     color: $c-block-title;
     font-weight: $fw-bold;
     font-size: $fs-block-title;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &__border {
     border: 1px solid $c-subtitle;
     width: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &__text {
     font-size: 18px; //todo не компілиться змінна
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 }
 
 .c-accordion {
   &__content {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   &__question {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     cursor: pointer;
     font-size: $fs-subtitle;
     font-family: $ff-block-title;
@@ -111,11 +78,12 @@ img {
     height: 0;
     transition: 0.5s;
     overflow-y: auto;
+    overflow-x: auto;
     overflow-y: hidden;
   }
 
   &__content.active &__text {
-    height: 60px;
+    height: 50px;
     padding: 10px 10px 20px 0;
   }
 

@@ -7,18 +7,23 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Choose a Class
-    link(rel="stylesheet" href="./tab.css")
+    link(rel="stylesheet" href="./index.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbt0F3RGczTmbyVMMyFIVd8wxxFSpFRN0&region=EN&language=en&callback=initMap&v=weekly"
+      async)
+
   body
     .wrapper
+      //- ! FAQ
       .c-faq__container 
         .c-faq__img-container 
-          img.c-faq__img(src="../assets/boxing-img.jpg" alt="Boxing Image")
+          img.c-faq__img(src="../assets/ny-boxing.png" alt="Boxing Image")
         .c-faq__content-container 
           .c-faq__subtitle FAQ
           h2.c-faq__title HAVE ANY QUESTIONS ABOUT BOXING?
           .c-faq__border 
           p.c-faq__text Below we give answers to the most frequently asked questions. You can also always contact us in any convenient way.
+          //- ! Accordion
           .c-faq__accordion
             .c-accordion
               .c-accordion__content.js-accordion
@@ -51,6 +56,7 @@ html(lang="en")
                   p.c-accordion__text
                     | You can sign up for the first free trial lesson by filling out the form on this website.
                   .c-accordion__border
+      //- ! Schedule
       .c-schedule 
         .c-schedule__subtitle Schedule 
         h2.c-schedule__title CHOOSE A CLASS 
@@ -219,4 +225,52 @@ html(lang="en")
                   td 6:30 pm - 7:30 pm
                   td Self-defense
                   td Susan Hooler
-    script(src="./tab.js" defer type="module") 
+      .c-contacts 
+        .c-contacts__content-container 
+          .c-contacts__subtitle Contacts
+          h2.c-contacts__title ASK US ANYTHING
+          .c-contacts__border 
+          p.c-contacts__description Feel free to contact us to ask any question or sign up for a lesson:
+          .c-contacts__address
+            h2.c-address__title Address
+            p.c-address__description 104-58 109th St, Jamaica, NY 11419, USA
+            h2.c-address__title Contacts
+            p.c-address__description +1 (234) 567 89 00 boxingschool@email.com
+        .c-contacts__form 
+          .c-form#js-form(method="post") 
+            .c-form__wrapper
+              //- Full name
+              label.c-form__label
+                input(id="js-form-fullname"
+                  placeholder="Enter your full name*"
+                  type="text"
+                  name="fullname"
+                  class="c-form__input c-form__input--fullname")
+              //- Phone number
+              label.c-form__label
+                input(id="js-form-phone"
+                  placeholder="Enter your phone number*"
+                  type="text"
+                  name="phone"
+                  class="c-form__input c-form__input--first-phone")
+              //- Email
+              label.c-form__label
+                input(id="js-form-email"
+                  placeholder="Enter your e-mail*"
+                  type="text"
+                  name="email"
+                  class="c-form__input c-form__input--first-email")
+              //- Date
+              label.c-form__label
+                input(id="js-form-first-name"
+                  placeholder="Enter your full name*"
+                  type="text"
+                  name="firstName"
+                  class="c-form__input c-form__input--first-name")
+              button(type="submit").c-form__button#js-trigger
+                span SIGN UP FOR A FREE TRAINING
+      .map(style="height: 700px")#js-map
+    script(src='./map.js')
+    script(defer type="module" src="./index.js") 
+
+    script(src="./js/info-to-server.js") 

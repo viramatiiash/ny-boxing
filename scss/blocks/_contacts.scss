@@ -1,0 +1,24 @@
+.c-contacts {
+  background-color: $c-contact-bg;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // &__content-container {
+    
+  // }
+
+
+}
+
+  .c-form {
+    
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
